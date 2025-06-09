@@ -32,6 +32,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user)
 
 class TagViewSet(mixins.UpdateModelMixin,
+                 mixins.DestroyModelMixin,
                  mixins.ListModelMixin,
                  viewsets.GenericViewSet):
     """View for manage recipe APIs"""
